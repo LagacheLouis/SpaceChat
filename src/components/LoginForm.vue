@@ -31,7 +31,7 @@ export default {
         width: 550px;
         display: flex;
         border-radius: 30px;
-        z-index: 30;
+        z-index: 0;
         position: absolute;
         top: 60%;
         left: calc(50% - 275px);
@@ -41,7 +41,6 @@ export default {
         max-height: 60px;
         border: none;
         background-color: transparent;
-        z-index: 30;
         outline: none;
     }
     input{

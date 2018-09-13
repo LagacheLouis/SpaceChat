@@ -46,6 +46,7 @@ export default {
         height: 3vh;
         min-height: 60px; 
         background-color: $red_panel_color;
+        z-index: 1;
     }
     textarea {
         overflow: hidden;

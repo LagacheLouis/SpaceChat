@@ -22,7 +22,7 @@ export default {
                 height : `${this.info[2]/100 * window.innerHeight}px`,
                 width : `${this.info[2]/100 * window.innerHeight}px`,
                 'z-index' : this.info[3],
-                filter : `blur(${this.info[4]}px)`
+               /* filter : `blur(${this.info[4]}px)`*/
             }
         }
     },

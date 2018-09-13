@@ -20,5 +20,6 @@ export default {
         background-color: $red_panel_color;
         min-width: 25vw;
         box-shadow: 0px 15px 15px 4px black;
+        z-index: 1;
     }
 </style>

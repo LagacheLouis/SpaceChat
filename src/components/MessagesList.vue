@@ -1,6 +1,7 @@
 <template>
     <div id="messagesList">
         <Message v-for="(message,index) in messages" :key="index" :message="message"/>
+        <div class="degrade"></div>
     </div>
 </template>
 
@@ -14,9 +15,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import "@/assets/var.scss";
+
  #messagesList{
      flex-grow: 1;
      overflow-y: scroll;
+ }
+ .degrade{
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    background-image:linear-gradient(to bottom, $background_color 0%, transparent 50%);;
  }
 </style>
 
