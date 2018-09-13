@@ -1,6 +1,7 @@
 import io from 'socket.io-client';
 
 const url = 'https://bddi-2019-chat.herokuapp.com';
+// const url = 'http://10.12.0.164:3000'
 
 const socket = io.connect(url);
 
@@ -10,7 +11,7 @@ const api = {
     },
     userRegister (username, avatar = '') {
         return new Promise((resolve, reject) => {
-            socket.once('user register', (user) => {
+            socket.once('user registered', (user) => {
                 resolve(user)
             })
             socket.once('error', (error) => {
@@ -22,7 +23,7 @@ const api = {
             });
         })
     },
-    messageSend(message){
+    messageSend(message = ''){
         emitProxy('message new', message);
     },
     commandSend (command, value='') {

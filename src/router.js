@@ -13,10 +13,10 @@ const router = new Router({
     {
       path: '/',
       name: 'chat',
-      component: ChatView,
       meta: {
         requiresAuth : true
-      }
+      },
+      component: ChatView
     },
     {
       path: '/login',

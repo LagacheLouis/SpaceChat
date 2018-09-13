@@ -1,7 +1,7 @@
 <template>
     <div id="loginView">
         <parallaxBackground/>
-        <loginForm @submit = "onFormSubmit"/>
+        <loginForm @submit="onFormSubmit"/>
     </div>
 </template>
 
@@ -14,11 +14,11 @@ export default {
     components :{
         LoginForm,
         ParallaxBackground
-    },methods :{
+    },
+    methods :{
         onFormSubmit (username){
-            this.$api.userRegister({
-                username
-            }).then(user => {
+            console.log('test', username);
+            this.$api.userRegister(username).then((user) => {
                 store.user = user;
                 this.$router.push({name: 'chat'})
             });

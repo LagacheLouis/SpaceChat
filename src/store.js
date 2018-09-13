@@ -9,7 +9,7 @@ const store = new Vue ({
     created () {
         Vue.nextTick(() => { //ça va trop vite donc on ralenti
             this.$api.onMessage(({user,message}) => {
-                store.message.push(data.message)
+                store.messages.push(data.message)
             })
     
             //@ts-ignore pour le $api sauf que moi il s'en fou
@@ -19,6 +19,7 @@ const store = new Vue ({
             })
 
             this.$api.onError((data) => {
+                //console.log('error')
                 console.error('Error from API:', data)
             })
         })

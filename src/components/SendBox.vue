@@ -8,13 +8,13 @@
 </template>
 <script>
 export default {
-    data(){
+    data() {
         return {
             input : ''
         }
     },
     methods : {
-        onFormSubmit(){
+        onFormSubmit(){            
             this.$emit('messageSent',this.input);
             this.input = '';
             document.querySelector('textarea').rows = '1';
@@ -68,14 +68,14 @@ export default {
     .submit {
         cursor: pointer;
         border: none;
-        padding: 0px 0px 0px 0px;
+        padding: 0px 0px 6px 0px;
         resize: none;
-        height: 40px;
-        border-radius: 40px;
-        font-size: 20px;
-        width: 40px;
+        height: 60px;
+        border-radius: 60px;
+        font-size: 35px;
+        width: 60px;
         background-color: white;
-        color: $orange_message;
-        margin-left: 65px;
+        color: #FBC3BF;
+        margin-left: 83px;
     }
 </style>
