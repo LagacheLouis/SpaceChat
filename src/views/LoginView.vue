@@ -5,20 +5,23 @@
                 <h1>SPACE</h1>
                 <h1>CHATROOM</h1>
             </div>
-            <form action ="#" @submit.prevent="onFormSubmit">
-                <input type="text"/>
-                <button>connect</button>
-            </form>
+            <loginForm @submit = "onFormSubmit"/>
         </div>
     </div>
 </template>
 
 <script>
+import LoginForm from "@/components/LoginForm.vue"
 export default {
-     methods : {
-        onFormSubmit(){
-            console.log("connect");
-            window.location.replace("./");
+    components :{
+        LoginForm
+    },methods :{
+        onFormSubmit (username){
+            this.$api.usserRegister({
+                username
+            }).then(user => {
+                store.user = user;
+            });
         }
     }
 }
