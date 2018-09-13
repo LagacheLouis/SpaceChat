@@ -32,19 +32,34 @@ export default {
         display: flex;
         border-radius: 30px;
         z-index: 30;
+        position: absolute;
+        top: 60%;
+        left: calc(50% - 275px);
     }
     form *{
-        height: 60px;
+        min-height: 60px;
+        max-height: 60px;
         border: none;
         background-color: transparent;
         z-index: 30;
+        outline: none;
     }
     input{
-         flex-grow: 4;  
-         border-right: 5px solid red;      
+         flex-grow: 1;  
+         border-right: 3px solid $grey_bar;    
+         padding-left: 30px;
     }
     button{
-       flex-grow: 1;
+       width: 60px;
+       cursor: pointer;
+    }
+    img{
+        height: 30px;
+        width: 30px;
+        transition: 0.2s;
     }
 
+    button:hover img{
+        transform: scale(0.8);
+    }
 </style>
