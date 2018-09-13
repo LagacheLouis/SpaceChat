@@ -26,3 +26,19 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+    @import '@/assets/var.scss';
+    form{
+        background-color: white;
+        width: 30%;
+        display: flex;
+        border-radius: 30px;
+    }
+    form *{
+        height: 30px;;
+        border: none;
+        flex-grow: 1;
+        background-color: transparent;
+    }
+
+</style>

@@ -56,7 +56,7 @@ table {
 
 /* ====== APP SCSS ======*/
 
-$red_panel_color : #F56860;
+ @import '@/assets/var.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -64,6 +64,7 @@ $red_panel_color : #F56860;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: $background_color;
 }
 #nav {
   padding: 30px;
