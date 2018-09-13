@@ -1,8 +1,8 @@
 <template>
     <div class = "message">
         <div>
-            <h2>USER</h2>
-            <p>{{message}}</p>
+            <h2>{{ message.user.username }}</h2>
+            <p>{{message.text}}</p>
         </div>
     </div>
 </template>

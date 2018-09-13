@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Message from "@/components/Message.vue"
+import Message from "./Message.vue"
 export default {
     props:['messages'],
     components:{
