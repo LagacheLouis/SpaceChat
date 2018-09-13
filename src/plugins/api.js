@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 
-const url = 'https://tesrggsfgstqffsd.com';
+const url = 'https://bddi-2019-chat.herokuapp.com';
 
 const socket = io.connect(url);
 
@@ -36,6 +36,10 @@ const api = {
     
     onUsersUpdate(cb) {
         socket.on('users update', cb)
+    },
+
+    onError (cb) {
+        socket.on('chat error', cb)
     }
 }
 

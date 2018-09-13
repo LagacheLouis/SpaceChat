@@ -1,9 +1,9 @@
 <template>
-    <form id ="sendBox" @submit.prevent="onFormSubmit">
-        <div id="inputZone">
-            <textarea v-model="input" @keyup="resizeTextArea()"/>
+    <form id ="sendBox" class="sendbox" @submit.prevent="onFormSubmit">
+        <div id="inputZone" class="input-zone">
+            <textarea placeholder="Write your message here and send it !"  :rows="1" :max-rows="15" v-model="input" @keydown.enter.exact.prevent="onFormSubmit" @keyup="resizeTextArea"/>
         </div>
-        <button>CLICK ME</button >
+        <input type="submit" value="▲" class="submit">
     </form>
 </template>
 <script>
@@ -17,11 +17,15 @@ export default {
         onFormSubmit(){
             this.$emit('messageSent',this.input);
             this.input = '';
+            document.querySelector('textarea').rows = '1';
         },
         resizeTextArea(){
             let textarea = document.querySelector('textarea');
-            var rows = textarea.value.split("\n");
-            textarea.setAttribute('rows', rows.length);
+            let rows = textarea.value.split("\n");
+
+            if (rows.length < 6) {
+                textarea.setAttribute('rows', rows.length);
+            }
         }
     }
     /*
@@ -36,20 +40,42 @@ export default {
 <style lang="scss" scoped>
     @import '@/assets/var.scss';
 
-    #sendBox{
+    .sendbox {
         padding: 30px;
         display: flex;
-        min-height: 10vh;
+        min-height: 3vh;
         background-color: $red_panel_color;
     }
-    textarea{
+    textarea {
         overflow: hidden;
+        border:none;
+        min-height: 30px;
+        padding: 15px 30px 15px 25px;
+        resize: none;
         width: 100%;
+        border-radius: 35px;
+        font-size: 1.5rem;
+        line-height: 30px;
+        font-size: 1.6rem;
     }
 
-    #inputZone{
+    .input-zone {
         max-width: 70%;
         width: 70%;
         text-align: left;
+    }
+
+    .submit {
+        cursor: pointer;
+        border: none;
+        padding: 0px 0px 0px 0px;
+        resize: none;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 20px;
+        width: 40px;
+        background-color: white;
+        color: $orange_message;
+        margin-left: 65px;
     }
 </style>

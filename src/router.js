@@ -14,9 +14,9 @@ const router = new Router({
       path: '/',
       name: 'chat',
       component: ChatView,
-     /* meta: {
+      meta: {
         requiresAuth : true
-      }*/
+      }
     },
     {
       path: '/login',
@@ -26,7 +26,7 @@ const router = new Router({
   ],
 });
 
-/*router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     // this route requires auth, check if logged in
     // if not, redirect to login page.
@@ -40,6 +40,6 @@ const router = new Router({
   } else {
     next() // make sure to always call next()!
   }
-})*/
+})
 
 export default router
