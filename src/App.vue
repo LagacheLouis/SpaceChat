@@ -55,6 +55,9 @@ table {
 }
 
 /* ====== APP SCSS ======*/
+
+$red_panel_color : #F56860;
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

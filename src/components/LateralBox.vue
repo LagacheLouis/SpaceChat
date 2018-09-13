@@ -1,5 +1,6 @@
 <template>
     <div id="lateralBox">
+        <p>USER NAME</p>
         <UsersList/>
     </div>
 </template>
@@ -13,7 +14,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    @import '@/assets/var.scss';
+
     #lateralBox{
-        background-color: red;
+        background-color: $red_panel_color;
+        min-width: 15vw;
     }
 </style>

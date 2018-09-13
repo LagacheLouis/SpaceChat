@@ -29,6 +29,8 @@ export default {
 
 <style lang="scss" scoped>
     #chatBox{
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
     }
 </style>
