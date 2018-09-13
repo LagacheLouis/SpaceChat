@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="messagesList">
         <Message v-for="(message,index) in messages" :key="index" :message="message"/>
     </div>
 </template>
@@ -13,3 +13,9 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+ #messagesList{
+     flex-grow: 1;
+ }
+</style>
+

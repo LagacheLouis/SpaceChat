@@ -1,18 +1,24 @@
 <template>
-    <div>
-        <div>Coucou c'est le chat</div>
-        <UsersList/>
+    <div id="ChatView">
         <ChatBox/>
+        <LateralBox/>
     </div>
 </template>
 
 <script>
-import UsersList from "@/components/UsersList.vue";
+import LateralBox from "@/components/LateralBox.vue";
 import ChatBox from "@/components/ChatBox.vue";
 export default {
     components:{
-        UsersList,
+        LateralBox,
         ChatBox
     }
 }
 </script>
+<style lang="scss" scoped>
+    #ChatView{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+</style>

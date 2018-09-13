@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id ="chatBox">
         <MessagesList :messages = "messages"/>
         <SendBox  @messageSent ="onMessageSent"/>
     </div>
@@ -30,3 +30,9 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+    #chatBox{
+        background-color: blue;
+        flex-grow: 1;
+    }
+</style>
