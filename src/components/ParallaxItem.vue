@@ -17,10 +17,10 @@ export default {
         style(){
             return {
                 transform : `translate3d( ${(window.innerWidth/2-this.mouseX)/100 * this.info[3]}px,  ${(window.innerHeight/2-this.mouseY)/100 * this.info[3]}px,0)`,
-                left : `${this.info[0]/100 * window.innerWidth - this.info[2]/2}px`,
-                top : `${this.info[1]/100 * window.innerHeight - this.info[2]/2}px`,
-                height : `${this.info[2]}px`,
-                width : `${this.info[2]}px`,
+                left : `${this.info[0]/100 * window.innerWidth - this.info[2]/100 * window.innerHeight * 0.5}px`,
+                top : `${this.info[1]/100 * window.innerHeight - this.info[2]/100 * window.innerHeight * 0.5}px`,
+                height : `${this.info[2]/100 * window.innerHeight}px`,
+                width : `${this.info[2]/100 * window.innerHeight}px`,
                 'z-index' : this.info[3],
                 filter : `blur(${this.info[4]}px)`
             }

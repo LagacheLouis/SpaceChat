@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
  #messagesList{
      flex-grow: 1;
+     overflow-y: scroll;
  }
 </style>
 

@@ -43,7 +43,8 @@ export default {
     .sendbox {
         padding: 30px;
         display: flex;
-        min-height: 3vh;
+        height: 3vh;
+        min-height: 60px; 
         background-color: $red_panel_color;
     }
     textarea {

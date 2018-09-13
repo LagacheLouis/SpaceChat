@@ -1,13 +1,13 @@
 <template>
     <div>
-        <ParallaxItem :info="[20,95,800,80,20]" :source="'/img/asteroide_4.svg'"/>
-        <ParallaxItem :info="[75,0,400,30,10]" :source="'/img/asteroide_5.svg'"/>
-        <ParallaxItem :info="[80,60,400,15,0]" :source="'/img/asteroide_1.svg'"/>
-        <ParallaxItem :info="[30,20,200,5,3]" :source="'/img/asteroide_4.svg'"/>
-        <ParallaxItem :info="[20,55,100,2,5]" :source="'/img/asteroide_5.svg'"/>
-        <ParallaxItem :info="[50,20,550,4,0]" :source="'/img/text_space.svg'"/>
-        <ParallaxItem :info="[50,37,550,8,0]" :source="'/img/avatar.svg'"/>
-        <ParallaxItem :info="[50,52,600,12,0]" :source="'/img/text_chatroom.svg'"/>
+        <ParallaxItem :info="[20,95,60,80,20]" :source="'/img/asteroide_4.svg'"/>
+        <ParallaxItem :info="[75,0,40,30,10]" :source="'/img/asteroide_5.svg'"/>
+        <ParallaxItem :info="[80,60,30,15,0]" :source="'/img/asteroide_1.svg'"/>
+        <ParallaxItem :info="[30,20,15,5,3]" :source="'/img/asteroide_4.svg'"/>
+        <ParallaxItem :info="[20,55,10,2,5]" :source="'/img/asteroide_5.svg'"/>
+        <ParallaxItem :info="[50,20,30,4,0]" :source="'/img/text_space.svg'"/>
+        <ParallaxItem :info="[50,37,30,8,0]" :source="'/img/avatar.svg'"/>
+        <ParallaxItem :info="[50,52,33,13,0]" :source="'/img/text_chatroom.svg'"/>
        
     </div>
 </template>
