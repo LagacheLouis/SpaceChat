@@ -1,5 +1,5 @@
 <template>
-    <div id ="chatBox">
+    <div id ="chatBox" class="chatbox">
         <MessagesList :messages= "messages"/>
         <SendBox  @messageSent="onMessageSent"/>
     </div>
@@ -16,7 +16,6 @@ export default {
     },
     methods : {
         onMessageSent(message){
-            // store.messages.push(message);
             this.$api.messageSend(message)
         }
     },
@@ -28,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #chatBox{
+    .chatbox {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
