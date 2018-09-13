@@ -12,15 +12,18 @@
 
 <script>
 import LoginForm from "@/components/LoginForm.vue"
+import store from "../store"
+
 export default {
     components :{
         LoginForm
     },methods :{
         onFormSubmit (username){
-            this.$api.usserRegister({
+            this.$api.userRegister({
                 username
             }).then(user => {
                 store.user = user;
+                this.$router.push({name: 'chat'})
             });
         }
     }

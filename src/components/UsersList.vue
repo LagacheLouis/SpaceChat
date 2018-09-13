@@ -5,16 +5,10 @@
 </template>
 <script>
     import UsersListUser from "@/components/UsersListUser";
+    import store from "../store";
     export default {
-        data(){
-            return{
-                users : [
-                    'Matchete',
-                    'Planet Terror',
-                    'Alien'
-                ]
-                
-            }
+        computed: {
+            users: () => store.users
         },
         components:{
             UsersListUser

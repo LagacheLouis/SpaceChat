@@ -1,38 +1,34 @@
 <template>
     <div id ="chatBox">
-        <MessagesList :messages = "messages"/>
-        <SendBox  @messageSent ="onMessageSent"/>
+        <MessagesList :messages= "messages"/>
+        <SendBox  @messageSent="onMessageSent"/>
     </div>
 </template>
 
 <script>
 import MessagesList from "@/components/MessagesList.vue";
 import SendBox from "@/components/SendBox.vue";
+import store from "../store";
+
 export default {
-    data(){
-        return{
-            messages:[
-                'a que coucou bob',
-                'booooooonjour',
-                'spam'
-            ]
+    computed: {
+        messages: () => store.messages
+    },
+    methods : {
+        onMessageSent(message){
+            // store.messages.push(message);
+            this.$api.messageSend(message)
         }
     },
     components :{
         MessagesList,
         SendBox
     },
-    methods : {
-        onMessageSent(message){
-            this.messages.push(message);
-        }
-    }
 }
 </script>
 
 <style lang="scss" scoped>
     #chatBox{
-        background-color: blue;
         flex-grow: 1;
     }
 </style>
