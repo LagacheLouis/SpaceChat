@@ -56,6 +56,11 @@ table {
 
 /* ====== APP SCSS ======*/
 
+body{
+  overflow: hidden;
+  max-height: 100vh;
+}
+
  @import '@/assets/var.scss';
 
 #app {
@@ -65,6 +70,7 @@ table {
   text-align: center;
   color: #2c3e50;
   background-color: $background_color;
+
 }
 #nav {
   padding: 30px;

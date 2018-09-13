@@ -1,22 +1,19 @@
 <template>
     <div id="loginView">
-        <div>
-            <div>
-                <h1>SPACE</h1>
-                <h1>CHATROOM</h1>
-            </div>
-            <loginForm @submit = "onFormSubmit"/>
-        </div>
+        <parallaxBackground/>
+        <loginForm @submit = "onFormSubmit"/>
     </div>
 </template>
 
 <script>
-import LoginForm from "@/components/LoginForm.vue"
-import store from "../store"
+import ParallaxBackground from "@/components/ParallaxBackground.vue";
+import LoginForm from "@/components/LoginForm.vue";
+import store from "../store";
 
 export default {
     components :{
-        LoginForm
+        LoginForm,
+        ParallaxBackground
     },methods :{
         onFormSubmit (username){
             this.$api.userRegister({
@@ -25,7 +22,7 @@ export default {
                 store.user = user;
                 this.$router.push({name: 'chat'})
             });
-        }
+        },
     }
 }
 </script>
