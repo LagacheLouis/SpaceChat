@@ -1,10 +1,10 @@
 <template>
-    <img v-bind:style="style" src= "@/assets/asteroide.svg" />
+    <img v-bind:style="style" v-bind:src="source"/>
 </template>
 <script>
 export default {
-    // 0 : posX 1: posY 2: size 3: parallaxpower
-    props : ['info'],
+    // 0 : posX 1: posY 2: size 3: parallaxpower 4: blur
+    props : ['info','source'],
     data(){
         return {
             mouseY : 0,
@@ -22,7 +22,7 @@ export default {
                 height : `${this.info[2]}px`,
                 width : `${this.info[2]}px`,
                 'z-index' : this.info[3],
-                filter : `blur(${this.info[3]/5}px)`
+                filter : `blur(${this.info[4]}px)`
             }
         }
     },

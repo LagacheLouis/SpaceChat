@@ -30,6 +30,9 @@ export default {
 
 <style lang="scss" scoped>
     #loginView{
-            height : 100vh;
+        height : 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

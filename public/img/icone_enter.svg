@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>button_enter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Log-In" transform="translate(-825.000000, -560.000000)" fill="#ADB0B9">
+            <g id="writer_space" transform="translate(415.000000, 538.000000)">
+                <polygon id="button_enter" transform="translate(421.000000, 33.000000) rotate(90.000000) translate(-421.000000, -33.000000) " points="421 22 432 44 410 44"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

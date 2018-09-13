@@ -70,6 +70,8 @@ body{
   text-align: center;
   color: #2c3e50;
   background-color: $background_color;
+  background-image: url("/img/texture.svg");
+  background-size: cover;
 
 }
 #nav {

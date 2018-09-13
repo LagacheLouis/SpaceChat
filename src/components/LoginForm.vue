@@ -1,10 +1,8 @@
 <template>
-    <div>
-        <form action="" @submit.prevent="onFormSubmit">
-            <input type="text" placeholder="Pseudooooo" v-model="username">
-            <button>Login</button>
-        </form>
-    </div>
+    <form action="" @submit.prevent="onFormSubmit">
+        <input type="text" placeholder="Pseudooooo" v-model="username">
+        <button><img src="/img/icone_enter.svg"/></button>
+    </form>
 </template>
 
 <script>
@@ -30,15 +28,23 @@ export default {
     @import '@/assets/var.scss';
     form{
         background-color: white;
-        width: 30%;
+        width: 550px;
         display: flex;
         border-radius: 30px;
+        z-index: 30;
     }
     form *{
-        height: 30px;;
+        height: 60px;
         border: none;
-        flex-grow: 1;
         background-color: transparent;
+        z-index: 30;
+    }
+    input{
+         flex-grow: 4;  
+         border-right: 5px solid red;      
+    }
+    button{
+       flex-grow: 1;
     }
 
 </style>
