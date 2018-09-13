@@ -12,7 +12,7 @@ export default {
     data(){
         return{
             messages:[
-                'a que coucou bob',
+                'a que coucou bob ldfdfklkdffddfklkldfkl dkfdkdkfkkdjdf dfkklkdfkdfd  dfklkldffkl dflkkfldklfd fkfdlkflkdfkl  dfkldfikdfl ffdfkdflkdf fkldfkldfkl fddkfdklkldf ldfkldfkldf kkfdkkjfdf djkfjdfkdjk fdkldfkkl fdkkdfjdfk kfldlkdkld',
                 'booooooonjour',
                 'spam'
             ]
@@ -32,7 +32,8 @@ export default {
 
 <style lang="scss" scoped>
     #chatBox{
-        background-color: blue;
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
     }
 </style>
