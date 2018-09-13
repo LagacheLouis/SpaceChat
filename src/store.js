@@ -8,7 +8,7 @@ const store = new Vue ({
     },
     created () {
         Vue.nextTick(() => { //ça va trop vite donc on ralenti
-            this.$api.onMessage(({user,message}) => {
+            this.$api.onMessage((data) => {
                 store.messages.push(data.message)
             })
     
