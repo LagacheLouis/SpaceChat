@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="43px" viewBox="0 0 33 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icones/icone_deconnexion</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0832 0.334 12.5832 0.334 12.5832 29.0005 0.0832 29.0005"></polygon>
+    </defs>
+    <g id="Chatroom" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1227.000000, -21.000000)" id="icones/deconnexion">
+            <g transform="translate(1227.000000, 21.000000)">
+                <g id="deconnexion">
+                    <path d="M30.5002,26.4164 C30.5002,34.2864 24.1202,40.6664 16.2502,40.6664 C8.3802,40.6664 2.0002,34.2864 2.0002,26.4164 C2.0002,18.5464 8.3802,12.1664 16.2502,12.1664 C24.1202,12.1664 30.5002,18.5464 30.5002,26.4164 Z" id="Stroke-1" stroke="#F5E4B0" stroke-width="4"></path>
+                    <path d="M16.3332,26.6669 C13.9892,26.6669 12.0832,24.7599 12.0832,22.4169 L12.0832,6.2499 C12.0832,3.9069 13.9892,1.9999 16.3332,1.9999 C18.6772,1.9999 20.5832,3.9069 20.5832,6.2499 L20.5832,22.4169 C20.5832,24.7599 18.6772,26.6669 16.3332,26.6669" id="Fill-3" fill="#F5E4B0"></path>
+                    <g id="Group-7" transform="translate(10.000000, -0.333600)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-6"></g>
+                        <path d="M6.3332,0.3335 C2.8872,0.3335 0.0832,3.1375 0.0832,6.5835 L0.0832,22.7505 C0.0832,26.1965 2.8872,29.0005 6.3332,29.0005 C9.7792,29.0005 12.5832,26.1965 12.5832,22.7505 L12.5832,6.5835 C12.5832,3.1375 9.7792,0.3335 6.3332,0.3335 M6.3332,4.3335 C7.5702,4.3335 8.5832,5.3465 8.5832,6.5835 L8.5832,22.7505 C8.5832,23.9885 7.5702,25.0005 6.3332,25.0005 C5.0962,25.0005 4.0832,23.9885 4.0832,22.7505 L4.0832,6.5835 C4.0832,5.3465 5.0962,4.3335 6.3332,4.3335" id="Fill-5" fill="#F56860" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

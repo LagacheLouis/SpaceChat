@@ -15,3 +15,14 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    @import '@/assets/var.scss';
+
+    div {
+        max-height: 40vh;
+        margin-top: 70px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+</style>

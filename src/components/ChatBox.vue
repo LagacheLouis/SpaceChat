@@ -1,5 +1,6 @@
 <template>
     <div id ="chatBox" class="chatbox">
+        <audio src="/sound/music.mp3" type="audio/mpeg" autoplay loop  style="display:none"/>
         <MessagesList :messages="messages"/>
         <SendBox  @messageSent="onMessageSent"/>
         <Asteroide/>
