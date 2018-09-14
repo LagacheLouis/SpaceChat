@@ -68,6 +68,12 @@ export default {
             this.$api.onCommand((command) => {
                 console.log(command);
                 if (command.message.text === '/wizz') {
+                    let boom = document.createElement('audio');
+                    boom.src = "/sound/boom.mp3"
+                    boom.type = "audio/mpeg"
+                    boom.autoplay = true;
+                    boom.style.display = "none";
+                    document.body.appendChild(boom)
                     this.push()
                 }
             
