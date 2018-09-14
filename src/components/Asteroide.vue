@@ -4,6 +4,7 @@
 
 <script>
 import Vue from 'vue';
+import store from "../store";
 
 export default {
     data(){
@@ -63,6 +64,14 @@ export default {
     mounted(){
         Vue.nextTick( () => {
             this.respawn();
+
+            this.$api.onCommand((command) => {
+                console.log(command);
+                if (command.message.text === '/wizz') {
+                    this.push()
+                }
+            
+            })
         })
      
     }

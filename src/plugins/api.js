@@ -35,6 +35,13 @@ const api = {
     onMessage(cb) {
         socket.on('message new', cb)
     },
+
+
+    onCommand(cb) {
+        console.log(cb);
+        
+        socket.on('command new', cb)
+    },
     
     onUsersUpdate(cb) {
         socket.on('users update', cb)

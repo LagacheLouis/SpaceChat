@@ -1,7 +1,6 @@
 <template>
     <div>
         <UsersListUser v-for="(user,index) in users" :key="index" :user="user" />
-    <div class='list-degrade'></div>
     </div>
     
 </template>

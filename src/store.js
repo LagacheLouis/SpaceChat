@@ -4,13 +4,28 @@ const store = new Vue ({
     data: {
         messages: [],
         user: null,
-        users: []
+        users: [],
+        command: []
     },
     created () {
         Vue.nextTick(() => { //ça va trop vite donc on ralenti
             this.$api.onMessage((data) => {
                 store.messages.unshift(data.message)
             })
+
+            // this.$api.onCommand((command) => {
+            //     console.log(command);
+            //     switch (command.message.text) {
+            //         case '/wizz':
+            //             console.log('wiiiiizzzz');
+            //             store.command.push('wizz')
+            //             break;
+                
+            //         default:
+            //             break;
+            //     }
+            
+            // })
     
             //@ts-ignore pour le $api sauf que moi il s'en fou
             this.$api.onUsersUpdate(({type, user ,users}) => {
