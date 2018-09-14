@@ -19,6 +19,7 @@ export default {
     .lateralbox{
         background-color: $red_panel_color;
         min-width: 25vw;
+        max-width: 25vw;
         box-shadow: 0px 15px 15px 4px black;
         z-index: 1;
     }

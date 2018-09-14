@@ -36,7 +36,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  font-size: 26px;  
 }
 ol, ul {
 	list-style: none;
@@ -55,6 +56,18 @@ table {
 }
 
 /* ====== APP SCSS ======*/
+
+@font-face {
+    font-family: "title_font";
+    src: url("./assets/OCRAStd.otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "normal_font";
+    src: url("./assets/PTC55F.ttf") format("truetype");
+}
+
 
 body{
   overflow: hidden;
