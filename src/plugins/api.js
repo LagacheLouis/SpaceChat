@@ -24,6 +24,7 @@ const api = {
         })
     },
     messageSend(message = ''){
+        console.log(message)
         emitProxy('message new', message);
     },
     commandSend (command, value='') {

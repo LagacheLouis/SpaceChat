@@ -1,5 +1,5 @@
 <template>
-    <div class = "message">
+    <div class = "message" :class="[message.user.username === currentuser ? 'userMessage' : '']" >
         <div>
             <h2>{{ message.user.username }}</h2>
             <p>{{message.text}}</p>
@@ -7,7 +7,12 @@
     </div>
 </template>
 <script>
+
+import store from "@/store";
 export default {
+    computed: {
+        currentuser: () => store.user.username
+    },
     props:['message']
 }
 </script>
@@ -50,9 +55,8 @@ export default {
         word-wrap: break-word;
         white-space: pre-wrap;
     }
-
-    .userMessage{
-        float: right;
+    
+    .userMessage {
         text-align: right;
 
         div {
