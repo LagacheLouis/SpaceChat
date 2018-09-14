@@ -18,14 +18,16 @@ export default {
 @import "@/assets/var.scss";
 
  #messagesList{
-     flex-grow: 1;
      overflow-y: scroll;
-     display: flex;
-     display: flex;
-     justify-content: flex-end;
-     flex-direction: column;
+          display: flex;
+     flex-direction: column-reverse;
      max-height: 93vh;
+     height: 93vh;
  }
+
+ #messagesList::-webkit-scrollbar { 
+    display: none; 
+}
  .degrade{
     top:0;
     right: 0;

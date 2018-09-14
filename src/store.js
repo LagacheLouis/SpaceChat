@@ -9,7 +9,7 @@ const store = new Vue ({
     created () {
         Vue.nextTick(() => { //ça va trop vite donc on ralenti
             this.$api.onMessage((data) => {
-                store.messages.push(data.message)
+                store.messages.unshift(data.message)
             })
     
             //@ts-ignore pour le $api sauf que moi il s'en fou

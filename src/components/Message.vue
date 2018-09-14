@@ -28,6 +28,7 @@ export default {
         font-family: title_font;
         margin: 0;
         margin-bottom:30px;
+        color: $title;
     }
 
     .message div{
@@ -54,8 +55,9 @@ export default {
     p{
         word-wrap: break-word;
         white-space: pre-wrap;
+        line-height: 30px;
     }
-    
+
     .userMessage {
         text-align: right;
 

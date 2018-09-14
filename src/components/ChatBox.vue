@@ -2,12 +2,15 @@
     <div id ="chatBox" class="chatbox">
         <MessagesList :messages="messages"/>
         <SendBox  @messageSent="onMessageSent"/>
+        <Asteroide/>
+        <Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/>
     </div>
 </template>
 
 <script>
 import MessagesList from "./MessagesList.vue";
 import SendBox from "./SendBox.vue";
+import Asteroide from "./Asteroide"
 import store from "../store";
 
 export default {
@@ -21,7 +24,8 @@ export default {
     },
     components :{
         MessagesList,
-        SendBox
+        SendBox,
+        Asteroide
     },
 }
 </script>
