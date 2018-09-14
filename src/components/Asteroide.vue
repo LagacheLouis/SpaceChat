@@ -1,5 +1,5 @@
 <template>
-    <img v-bind:style="style" src="/img/asteroide_1.svg" @transitionend="respawn" @mouseover="push"/>
+    <img v-bind:style="style" v-bind:src="image" @transitionend="respawn" @mouseover="push"/>
 </template>
 
 <script>
@@ -9,7 +9,9 @@ import store from "../store";
 export default {
     data(){
         let bool = Math.random() < 0.5;
+        let images = ["/img/asteroide_1.svg","/img/asteroide_2.svg","/img/asteroide_3.svg","/img/asteroide_4.svg","/img/asteroide_5.svg"];
         return{
+            image : images[Math.floor(Math.random() * images.length)],
             goleft: bool,
             posX: bool ? window.innerWidth : 0,
             posY: Math.random() * window.innerHeight,
