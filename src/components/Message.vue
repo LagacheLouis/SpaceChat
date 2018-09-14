@@ -55,7 +55,7 @@ export default {
     }
 
     p{
-        word-wrap: break-word;
+        word-break: break-all;
         white-space: pre-wrap;
         line-height: 30px;
     }
