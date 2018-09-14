@@ -6,6 +6,7 @@
             <h2 class="current-user">{{ currentUser }}</h2>
         </div>
         <UsersList/>
+        <div class='list-degrade'></div>
     </div>
 </template>
 
@@ -82,5 +83,15 @@ export default {
         max-width: 25vw;
         box-shadow: 0px 15px 15px 4px black;
         z-index: 1;
+    }
+
+    .list-degrade {
+        bottom: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        pointer-events: none;
+        background-image: linear-gradient(to top, #F56860 30%, transparent 50%);
     }
 </style>
