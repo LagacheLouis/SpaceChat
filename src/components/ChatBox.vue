@@ -4,7 +4,26 @@
         <MessagesList :messages="messages"/>
         <SendBox  @messageSent="onMessageSent"/>
         <Asteroide/>
-        <Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/><Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <Asteroide/>
+        <div class="degrade"></div>
     </div>
 </template>
 
@@ -32,9 +51,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .chatbox {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
+@import '@/assets/var.scss';
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+    .degrade{
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    background-image:linear-gradient(to bottom, $background_color 0%, transparent 50%);
+    z-index: 1;
+    
+}
 </style>

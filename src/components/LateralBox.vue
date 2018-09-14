@@ -21,12 +21,7 @@ export default {
     },
     methods: {
         Logout() {
-            store.user = null;
-            this.$router.push({name: 'login'})
-            // this.$api.userRegister(store.user.username).then((user) => {
-            //     store.user = user;
-            //     this.$router.push({name: 'chat'})
-            // });
+            location.reload();
         }
     }
 }
@@ -45,10 +40,10 @@ export default {
             cursor: pointer;
             align-self: flex-end;
             padding-right: 30px;
-            transition: .5s transform;
+            transition: .25s transform;
 
             &:hover {
-                transform: scale(0.95)
+                transform: scale(0.8)
             }
         }
         
@@ -81,6 +76,6 @@ export default {
         min-width: 25vw;
         max-width: 25vw;
         box-shadow: 0px 15px 15px 4px black;
-        z-index: 1;
+        z-index: 2;
     }
 </style>

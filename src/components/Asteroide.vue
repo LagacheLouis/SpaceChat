@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import Vue from 'vue';
+
 export default {
     data(){
         let bool = Math.random() < 0.5;
@@ -13,6 +15,7 @@ export default {
             width: Math.random() * 15 + 5,
             height: Math.random() * 15+ 5,
             speed: 0,
+            index : Math.random() < 0.4 ? 0 : 1,
             rotation : Math.random() * 360,
         }
     },
@@ -22,6 +25,7 @@ export default {
                 transform : `translate3d( ${this.posX}px,  ${this.posY}px,0) rotate(${this.rotation}deg)`,
                 width : `${this.width}%`,
                 height : `${this.height}%`,
+                'z-index': `${this.index}`,
                 transition: `linear ${this.speed}s`
             }
         }
@@ -30,6 +34,7 @@ export default {
         respawn(){
             this.speed = Math.random() * 6 + 4;
             this.rotation = Math.random() * 360;
+            this.index = Math.random() < 0.4 ? 0 : 1;
             if(this.goleft){
                 this.posX = 0;
                 this.posY = Math.random() * window.innerHeight;
@@ -54,8 +59,12 @@ export default {
                 this.goleft = true;
             }
         }
-    },mounted(){
-        this.respawn();
+    },
+    mounted(){
+        Vue.nextTick( () => {
+            this.respawn();
+        })
+     
     }
 }
 </script>
@@ -63,7 +72,6 @@ export default {
 <style lang="scss" scoped>
 img{
     position: absolute;
-    transition: linear 1000s;
     top:0;
     left:-20%;
 } 

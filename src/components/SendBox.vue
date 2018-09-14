@@ -47,7 +47,7 @@ export default {
         display: flex;
         min-height: 3vh;
         background-color: $red_panel_color;
-        z-index: 1;
+        z-index: 2;
     }
     textarea {
         overflow: hidden;
@@ -86,5 +86,10 @@ export default {
         color: $pink_send;
         margin-left: 83px;
         outline: none;
+        transition: font-size 0.25s;
+    }
+
+    .submit:hover{
+        font-size: 28px;
     }
 </style>

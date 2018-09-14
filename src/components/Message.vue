@@ -20,8 +20,10 @@ export default {
 <style lang="scss" scoped>
      @import '@/assets/var.scss';
     .message{
+        z-index: 1;
         text-align: left;
         margin: 0 25px;
+        pointer-events: none;
     }
 
     h2{
