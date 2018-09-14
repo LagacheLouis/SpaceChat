@@ -1,5 +1,6 @@
 <template>
     <form id ="sendBox" class="sendbox" @submit.prevent="onFormSubmit">
+         <audio class="sendfx" src="/sound/sound_asteroid.wav" type="audio/wav"  style="display:none"/>
         <div id="inputZone" class="input-zone">
             <textarea placeholder="Write your message here and send it !"  :rows="1" :max-rows="15" v-model="input" @keydown.enter.exact.prevent="onFormSubmit" @keyup="resizeTextArea"/>
         </div>
@@ -14,7 +15,8 @@ export default {
         }
     },
     methods : {
-        onFormSubmit(){            
+        onFormSubmit(){ 
+            document.querySelector('.sendfx').play();           
             this.$emit('messageSent',this.input);
             this.input = '';
             document.querySelector('textarea').rows = '1';

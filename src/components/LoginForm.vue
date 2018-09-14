@@ -1,5 +1,6 @@
 <template>
     <form action="" @submit.prevent="onFormSubmit">
+        <audio src="/sound/sound_asteroid.wav" type="audio/wav"  style="display:none"/>
         <input type="text" placeholder="Write your pseudo" v-model="username">
         <button><img src="/img/icone_enter.svg"/></button>
     </form>
@@ -14,6 +15,7 @@ export default {
     },
     methods: {
         onFormSubmit() {
+            document.querySelector('audio').play();
             if (this.username.length > 0) {
                 this.$emit('submit', this.username)
             } else {

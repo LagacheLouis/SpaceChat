@@ -1,7 +1,8 @@
 <template>
     <div id="lateralBox" class="lateralbox">
         <div class="user-box">
-            <img src="/img/avatar.svg" alt="Le super avatar">
+            <img @click="Logout" class="deco" src="/img/icone_deconnexion.svg" alt="">
+            <img class="avatar"  src="/img/avatar.svg" alt="Le super avatar">
             <h2 class="current-user">{{ currentUser }}</h2>
         </div>
         <UsersList/>
@@ -17,6 +18,16 @@ export default {
     },
     computed: {
         currentUser: () => store.user.username
+    },
+    methods: {
+        Logout() {
+            store.user = null;
+            this.$router.push({name: 'login'})
+            // this.$api.userRegister(store.user.username).then((user) => {
+            //     store.user = user;
+            //     this.$router.push({name: 'chat'})
+            // });
+        }
     }
 }
 </script>
@@ -25,19 +36,37 @@ export default {
 
     .user-box {
         position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 30px;
+
+        .deco {
+            cursor: pointer;
+            align-self: flex-end;
+            padding-right: 30px;
+            transition: .5s transform;
+
+            &:hover {
+                transform: scale(0.95)
+            }
+        }
         
-        img {
+        .avatar {
             width: 70%;
             margin: 0 auto;
+            transform: scaleX(-1)
         }
 
         h2 {
-            padding: 12px 0;
+            padding: 9px 12px;
             border: 2px #313950 solid;
-            width: 100%;
             margin: 0 auto;
-            position: absolute;
+            position: relative;
             background-color: $title;
+            bottom: 31px;
+            max-width: 70%;
+            word-break: break-all;
         }
     }
     .current-user {

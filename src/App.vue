@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition name="slide">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -56,6 +58,20 @@ table {
 }
 
 /* ====== APP SCSS ======*/
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-enter-active {
+  transition: all .3s ease;
+}
+.slide-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-enter, .slide-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-100vh);
+  opacity: 0;
+}
 
 @font-face {
     font-family: "title_font";
