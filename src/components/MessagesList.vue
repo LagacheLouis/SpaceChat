@@ -20,6 +20,10 @@ export default {
  #messagesList{
      flex-grow: 1;
      overflow-y: scroll;
+     display: flex;
+     display: flex;
+     justify-content: flex-end;
+     flex-direction: column;
  }
  .degrade{
     top:0;

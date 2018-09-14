@@ -1,6 +1,6 @@
 <template>
     <form action="" @submit.prevent="onFormSubmit">
-        <input type="text" placeholder="Pseudooooo" v-model="username">
+        <input type="text" placeholder="Write your pseudo" v-model="username">
         <button><img src="/img/icone_enter.svg"/></button>
     </form>
 </template>
@@ -47,6 +47,12 @@ export default {
          flex-grow: 1;  
          border-right: 3px solid $grey_bar;    
          padding-left: 30px;
+         font-family: normal_font;
+         font-size: 26px;
+    }
+
+    input::-webkit-input-placeholder{
+        color: $grey_bar;
     }
     button{
        width: 60px;
