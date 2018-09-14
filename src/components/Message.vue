@@ -19,25 +19,36 @@ export default {
         margin: 0 25px;
     }
 
+    h2{
+        font-family: title_font;
+        margin: 0;
+        margin-bottom:30px;
+    }
+
     .message div{
         display: inline-block;
         position: relative;
         max-width: 70%;
         border-radius: 20px;
-        background-color: $orange_message;
+        background-color: $pink_message;
         margin: 1vh;
         padding: 1vh;
         line-height: 1.5rem;
         color: white;
-
+        padding:30px;
         &:after {
             content: '◣';
-            color: $orange_message;
+            color: $pink_message;
             position: absolute;
             left: -5px;
             bottom: -7.5px;
             font-size: 10px;
         }
+    }
+
+    p{
+        word-wrap: break-word;
+        white-space: pre-wrap;
     }
 
     .userMessage{

@@ -35,6 +35,7 @@ export default {
         position: absolute;
         top: 60%;
         left: calc(50% - 275px);
+        z-index: 30;
     }
     form *{
         min-height: 60px;

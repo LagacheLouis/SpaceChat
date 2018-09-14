@@ -24,6 +24,7 @@ export default {
      display: flex;
      justify-content: flex-end;
      flex-direction: column;
+     max-height: 93vh;
  }
  .degrade{
     top:0;
@@ -32,7 +33,7 @@ export default {
     bottom: 0;
     position: absolute;
     pointer-events: none;
-    background-image:linear-gradient(to bottom, $background_color 0%, transparent 50%);;
+    background-image:linear-gradient(to bottom, $background_color 0%, transparent 50%);
  }
 </style>
 

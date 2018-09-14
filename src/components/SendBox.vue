@@ -43,8 +43,7 @@ export default {
     .sendbox {
         padding: 30px;
         display: flex;
-        height: 3vh;
-        min-height: 60px; 
+        min-height: 3vh;
         background-color: $red_panel_color;
         z-index: 1;
     }
@@ -59,6 +58,11 @@ export default {
         font-size: 1.5rem;
         line-height: 30px;
         font-size: 1.6rem;
+        font-family: normal_font;
+        outline: none;
+    }
+    textarea::-webkit-input-placeholder{
+         color: $pink_send;
     }
 
     .input-zone {
@@ -77,7 +81,8 @@ export default {
         font-size: 35px;
         width: 60px;
         background-color: white;
-        color: #FBC3BF;
+        color: $pink_send;
         margin-left: 83px;
+        outline: none;
     }
 </style>

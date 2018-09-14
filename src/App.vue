@@ -65,7 +65,7 @@ table {
 
 @font-face {
     font-family: "normal_font";
-    src: url("./assets/PTC55F.ttf") format("truetype");
+    src: url("./assets/PTN57F.ttf") format("truetype");
 }
 
 
